@@ -1,12 +1,26 @@
 @import "antd/dist/antd.css";
-
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap");
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 body {
   background: #f6f5f9;
+}
+
+.active {
+  background: white !important;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.04) !important;
+  color: #7f1aff !important;
+}
+
+input :focus .focused {
+  border: 1px solid #7f1aff !important;
+}
+
+input:focus .right-fucus {
+  border-right: 1px solid #7f1aff;
 }

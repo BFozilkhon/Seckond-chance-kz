@@ -1,3 +1,6 @@
+import Auth from "../component/Auth";
+import LogOut from "../component/Auth/LogOut";
+import Register from "../component/Auth/Register";
 import Generic from "../component/Generic";
 import HomePage from "../pages/Home";
 
@@ -65,18 +68,18 @@ export const navbarData = [
     id: 7,
     title: "Auth",
     path: "/auth",
-    element: <Generic />,
+    element: <Auth />,
     hidden: true,
     child: [
       {
         id: 4,
         path: "register",
-        element: <Generic />,
+        element: <Register />,
       },
       {
         id: 5,
         path: "logout",
-        element: <Generic />,
+        element: <LogOut />,
       },
     ],
   },

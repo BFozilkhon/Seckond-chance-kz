@@ -1,6 +1,7 @@
 import React from "react";
 import { Link, Outlet } from "react-router-dom";
 import { navbarData } from "../../utils/navbar";
+import Footer from "../Footer";
 import { Container, Div, DivInput, Flexing, Selects, Wrap } from "./style";
 
 export const Navbar = () => {
@@ -14,7 +15,7 @@ export const Navbar = () => {
         {/* Wrap */}
         <Div>
           <Wrap>
-            <DivInput>
+            <DivInput className="focused">
               <DivInput.Search />
               <DivInput.Input type={"text"} placeholder="Поиск по товарам" />
             </DivInput>
@@ -40,10 +41,12 @@ export const Navbar = () => {
               <Option value="6">Cancelled</Option>
             </Selects>
             {/* profil */}
-            <Flexing>
-              <Flexing.User />
-              <Flexing.Name>Войти</Flexing.Name>
-            </Flexing>
+            <Link to={"/auth/register"}>
+              <Flexing>
+                <Flexing.User />
+                <Flexing.Name>Войти</Flexing.Name>
+              </Flexing>
+            </Link>
           </Wrap>
           {/* 2section */}
           <Wrap items>
@@ -60,6 +63,7 @@ export const Navbar = () => {
         </Div>
       </Container>
       <Outlet />
+      <Footer />
     </>
   );
 };

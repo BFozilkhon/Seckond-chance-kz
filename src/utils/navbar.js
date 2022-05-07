@@ -1,11 +1,12 @@
 import Generic from "../component/Generic";
+import HomePage from "../pages/Home";
 
 export const navbarData = [
   {
     id: 1,
     title: "Home",
     path: "/home",
-    element: <Generic />,
+    element: <HomePage />,
     child: [],
     hidden: true,
   },

@@ -16,7 +16,7 @@ export const Navbar = () => {
           <Wrap>
             <DivInput>
               <DivInput.Search />
-              <DivInput.Input />
+              <DivInput.Input type={"text"} placeholder="Поиск по товарам" />
             </DivInput>
             {/* Select */}
             <Selects

@@ -1,5 +1,6 @@
 import React from "react";
 import Category from "./Category";
+import Discount from "./Discount";
 import Opener from "./Opener";
 
 export const Home = () => {
@@ -7,6 +8,7 @@ export const Home = () => {
     <div>
       <Opener />
       <Category />
+      <Discount />
     </div>
   );
 };

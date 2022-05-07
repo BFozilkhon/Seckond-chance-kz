@@ -1,53 +1,82 @@
 import Generic from "../component/Generic";
 
 export const navbarData = [
-     {
-         id: 1,
-         title:'Asosiy',
-         path: '/asosiy',
-         element: <Generic/>,
-         child: [],
-     },
-     {
+  {
+    id: 1,
+    title: "Home",
+    path: "/home",
+    element: <Generic />,
+    child: [],
+    hidden: true,
+  },
+  {
+    id: 2,
+    title: "Аукцион",
+    path: "/discount",
+    element: <Generic />,
+    child: [],
+  },
+  {
+    id: 3,
+    title: "Мужское",
+    path: "/boys",
+    element: <Generic />,
+    child: [],
+  },
+  {
+    id: 4,
+    title: "Женское",
+    path: "/girls",
+    element: <Generic />,
+    child: [],
+  },
+  {
+    id: 5,
+    title: "Аксессуары",
+    path: "/accessory",
+    element: <Generic />,
+    child: [],
+  },
+  {
+    id: 6,
+    title: "Магазины",
+    path: "/shop",
+    element: <Generic />,
+    child: [
+      {
+        id: 1,
+        path: "product",
+        element: <Generic />,
+      },
+      {
         id: 2,
-        title:'Kurslarimiz',
-        path: '/kurs',
-        element: <Generic/>,
-        child: [],
-    },
-    {
+        path: "buy",
+        element: <Generic />,
+      },
+      {
         id: 3,
-        title:'Blog',
-        path: '/blog',
-        element: <Generic/>,
-        child: [],
-    },
-    {
+        path: "discount",
+        element: <Generic />,
+      },
+    ],
+  },
+  {
+    id: 7,
+    title: "Auth",
+    path: "/auth",
+    element: <Generic />,
+    hidden: true,
+    child: [
+      {
         id: 4,
-        title:'Biz haqimizda',
-        path: '/biz-haqimizda',
-        element: <Generic/>,
-        child: [],
-    },
-    {
+        path: "register",
+        element: <Generic />,
+      },
+      {
         id: 5,
-        title:"Bog'lanish",
-        path: '/boglanish',
-        element: <Generic/>,
-        child: [],
-    },
-    {
-        id: 6,
-        title:"Kirish",
-        path: '/login',
-        element: <Generic/>,
-        child: [],
-    },
-    {
-        id: 7,
-        title:"Register",
-        path: '/register',
-        element: <Generic/>,
-        child: [],
-    },
-]
+        path: "logout",
+        element: <Generic />,
+      },
+    ],
+  },
+];

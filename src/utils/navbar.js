@@ -1,6 +1,9 @@
 import Auth from "../component/Auth";
 import LogOut from "../component/Auth/LogOut";
+import Password from "../component/Auth/Password";
 import Register from "../component/Auth/Register";
+import Verify from "../component/Auth/Verify";
+import { Discount } from "../component/Discount";
 import Generic from "../component/Generic";
 import HomePage from "../pages/Home";
 
@@ -17,7 +20,7 @@ export const navbarData = [
     id: 2,
     title: "Аукцион",
     path: "/discount",
-    element: <Generic />,
+    element: <Discount />,
     child: [],
   },
   {
@@ -72,12 +75,22 @@ export const navbarData = [
     hidden: true,
     child: [
       {
-        id: 4,
+        id: 10,
         path: "register",
         element: <Register />,
       },
       {
-        id: 5,
+        id: 11,
+        path: "verify",
+        element: <Verify />,
+      },
+      {
+        id: 12,
+        path: "password",
+        element: <Password />,
+      },
+      {
+        id: 13,
         path: "logout",
         element: <LogOut />,
       },

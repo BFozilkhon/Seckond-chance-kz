@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { ReactComponent as arrow } from "../../../assets/icons/arrow.svg";
+import { ReactComponent as password } from "../../../assets/icons/password.svg";
 
 export const Container = styled.div`
   width: 100%;
@@ -8,20 +8,12 @@ export const Container = styled.div`
   margin-top: 30px;
 `;
 
-export const Flexing = styled.div`
-  display: flex;
-  align-items: center;
-`;
-
-Flexing.Icons = styled(arrow)``;
-
-Flexing.Title = styled.div`
+Container.Title = styled.div`
   font-style: normal;
   font-weight: 500;
   font-size: 24px;
   line-height: 28px;
   color: #141414;
-  margin-left: 12px;
 `;
 
 Container.Text = styled.div`
@@ -31,7 +23,6 @@ Container.Text = styled.div`
   line-height: 20px;
   color: #807b86;
   margin: 8px 0px 32px 0px;
-  width: 90%;
 `;
 
 Container.Item = styled.div`
@@ -45,33 +36,50 @@ Container.Item = styled.div`
 export const Div = styled.div`
   display: flex;
   align-items: center;
-  justify-content: space-between;
   background: #ffffff;
-  margin: 10px 0px 40px 0px;
+  border: 1px solid #cccbda;
+  height: 48px;
+  margin: 10px 0px 0px 0px;
+  margin-bottom: ${({ first }) => first && "40px"};
 `;
+
+Div.IconCon = styled.div`
+  width: 60px;
+  height: 100%;
+  border-right: 1px solid #cccbda;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`;
+
+Div.Icons = styled(password)``;
 
 Div.Input = styled.input`
   border: none;
   outline: none;
-  width: 42px;
-  padding: 21px 0px;
-  height: 30px;
-  color: red;
   font-style: normal;
   font-weight: 400;
-  font-size: 24px;
-  line-height: 28px;
-  text-align: center;
-  color: #141414;
-  border-bottom: 1px solid #c0bbca;
+  font-size: 14px;
+  line-height: 18px;
+  color: #807b86;
+  padding: 15px 12px;
+  width: 100%;
+  height: 0px;
 `;
 
-Container.Link = styled.div`
+//li
+export const Ul = styled.ul`
+  padding-left: 20px;
+  margin-top: 10px;
+  margin-bottom: 40px;
+`;
+
+Ul.Li = styled.li`
   font-style: normal;
-  font-weight: 500;
+  font-weight: 400;
   font-size: 16px;
-  line-height: 20px;
-  color: #7f1aff;
+  line-height: 18px;
+  color: #807b86;
 `;
 
 Container.Btn = styled.div`

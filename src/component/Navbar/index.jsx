@@ -4,6 +4,7 @@ import { navbarData } from "../../utils/navbar";
 import Footer from "../Footer";
 import { Container, Div, DivInput, Flexing, Selects, Wrap } from "./style";
 
+
 export const Navbar = () => {
   const { Option } = Selects;
   return (
@@ -53,8 +54,8 @@ export const Navbar = () => {
             {navbarData.map(({ id, title, hidden, path }) => {
               return (
                 !hidden && (
-                  <Link to={path}>
-                    <Wrap.Items key={id}>{title}</Wrap.Items>
+                  <Link key={id} to={path}>
+                    <Wrap.Items>{title}</Wrap.Items>
                   </Link>
                 )
               );

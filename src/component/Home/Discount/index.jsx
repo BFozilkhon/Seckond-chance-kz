@@ -1,5 +1,6 @@
 import React from "react";
 import { discountData } from "../../../mock/discount";
+import CardGeneric from "../../Generic/Card";
 import { Container, Wrap } from "./style";
 
 export const Discount = () => {
@@ -9,17 +10,11 @@ export const Discount = () => {
 
       {/* Wrap */}
       <Wrap>
-        {discountData.map((e) => {
-          return (
-            <Wrap.Box key={e.id}>
-              <Wrap.Img src={e.img} alt="kategory" />
-              <Wrap.Title>{e.title}</Wrap.Title>
-              <Wrap.TitleLight>{e.titleLight}</Wrap.TitleLight>
-              <Wrap.Price>{e.price}</Wrap.Price>
-              <Wrap.Discount>{e.discount}</Wrap.Discount>
-            </Wrap.Box>
-          );
-        })}
+        {discountData
+          .filter((e) => e.home)
+          .map((value) => {
+            return <CardGeneric data={value} />;
+          })}
       </Wrap>
     </Container>
   );

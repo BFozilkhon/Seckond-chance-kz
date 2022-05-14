@@ -1,13 +1,16 @@
-import React from "react";
-import { Container, DivSelect, Dropdowns, Wrap } from "./style";
+import React, { useState } from "react";
+import { active, Container, DivBtn, DivSelect, Dropdowns, Wrap } from "./style";
 import Sidebar from "../Sidebar";
 import { discountData } from "../../mock/discount";
 import CardGeneric from "../Generic/Card";
+import { btnCategoryData } from "../../mock/btn-category";
 import { Menu, Space, Checkbox } from "antd";
 import { DownOutlined } from "@ant-design/icons";
 import { size } from "../../mock/selected";
 
-export const Discount = () => {
+export const Accessory = () => {
+  const [types, setTypes] = useState("product");
+
   const menu1 = (
     <Menu
       items={[
@@ -29,17 +32,23 @@ export const Discount = () => {
 
       {/* Wrap */}
       <Wrap>
-        <Wrap.Header>Аукцион</Wrap.Header>
+        <Wrap.Header>Аксессуары</Wrap.Header>
+        <DivBtn>
+          {btnCategoryData.map(({ id, title, type }) => {
+            return (
+              <DivBtn.Btn
+                style={types === type ? active : {}}
+                onClick={() => setTypes(type)}
+                key={id}
+              >
+                {title}
+              </DivBtn.Btn>
+            );
+          })}
+        </DivBtn>
         <DivSelect>
-          {/* first */}
-          <Dropdowns first overlay={menu1} trigger={["click"]}>
-            <Space style={{ cursor: "pointer" }}>
-              <DivSelect.Item>Размер</DivSelect.Item>
-              <DownOutlined />
-            </Space>
-          </Dropdowns>
           {/* second */}
-          <Dropdowns overlay={menu1} trigger={["click"]}>
+          <Dropdowns first overlay={menu1} trigger={["click"]}>
             <Space style={{ cursor: "pointer" }}>
               <DivSelect.Item>Состояние</DivSelect.Item>
               <DownOutlined />
@@ -63,4 +72,4 @@ export const Discount = () => {
   );
 };
 
-export default Discount;
+export default Accessory;

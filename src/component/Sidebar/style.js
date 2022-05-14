@@ -1,4 +1,5 @@
 import { Menu } from "antd";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 export const Container = styled.div`
@@ -8,6 +9,8 @@ export const Container = styled.div`
   top: 10%;
   padding-top: 10px;
   margin-right: 44px;
+  display: flex;
+  flex-direction: column;
 `;
 
 export const Menus = styled(Menu)`
@@ -41,6 +44,19 @@ Menus.Item = styled.div`
   color: #141414;
   padding-left: 40px;
   transition: all 0.5s;
+  margin: 8px 0px;
+  :hover {
+    color: #7f1aff;
+  }
+`;
+
+Container.Links = styled(Link)`
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 20px;
+  color: #141414;
+  padding-left: 22px;
   margin: 8px 0px;
   :hover {
     color: #7f1aff;

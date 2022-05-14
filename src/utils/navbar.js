@@ -1,10 +1,15 @@
+import Accessory from "../component/Accessory";
 import Auth from "../component/Auth";
 import LogOut from "../component/Auth/LogOut";
 import Password from "../component/Auth/Password";
 import Register from "../component/Auth/Register";
 import Verify from "../component/Auth/Verify";
-import { Discount } from "../component/Discount";
+import Boys from "../component/Boys";
+import Discount from "../component/Discount";
 import Generic from "../component/Generic";
+import Girls from "../component/Girls";
+import Shop from "../component/Shop";
+import Buy from "../component/Shop/Buy";
 import HomePage from "../pages/Home";
 
 export const navbarData = [
@@ -27,28 +32,28 @@ export const navbarData = [
     id: 3,
     title: "Мужское",
     path: "/boys",
-    element: <Generic />,
+    element: <Boys />,
     child: [],
   },
   {
     id: 4,
     title: "Женское",
     path: "/girls",
-    element: <Generic />,
+    element: <Girls />,
     child: [],
   },
   {
     id: 5,
     title: "Аксессуары",
     path: "/accessory",
-    element: <Generic />,
+    element: <Accessory />,
     child: [],
   },
   {
     id: 6,
     title: "Магазины",
     path: "/shop",
-    element: <Generic />,
+    element: <Shop />,
     child: [
       {
         id: 1,
@@ -66,6 +71,14 @@ export const navbarData = [
         element: <Generic />,
       },
     ],
+  },
+  {
+    id: 1332,
+    title: "Cart",
+    path: "/cart",
+    element: <Buy />,
+    child: [],
+    hidden: true,
   },
   {
     id: 7,

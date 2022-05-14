@@ -32,6 +32,8 @@ export const Sidebar = () => {
           );
         })}
       </Menus>
+      <Container.Links to="/accessory">Аксессуары</Container.Links>
+      <Container.Links to="/discount">Аукцион</Container.Links>
     </Container>
   );
 };

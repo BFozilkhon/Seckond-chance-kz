@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, DivSelect, Dropdowns, Wrap } from "./style";
+import {  Container, DivSelect, Dropdowns, Wrap } from "./style";
 import Sidebar from "../Sidebar";
 import { discountData } from "../../mock/discount";
 import CardGeneric from "../Generic/Card";

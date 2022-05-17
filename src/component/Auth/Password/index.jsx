@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import { Container, Div, Ul } from "./style";
-import { message } from "antd";
+import { useNavigate } from "react-router-dom";
 
 export const Password = () => {
   const [active, setActive] = useState(false);
-
+  const navigate = useNavigate();
   const getPassword = (e) => {
     if (
       e.target.value.length >= 8 &&
@@ -14,8 +14,8 @@ export const Password = () => {
     }
   };
 
-  const success = () => {
-    message.success("This is a success message");
+  const onClicked = () => {
+    active && navigate("/dashboard");
   };
 
   return (
@@ -55,7 +55,7 @@ export const Password = () => {
         </Ul.Li>
         <Ul.Li>Должно содержать одно число.</Ul.Li>
       </Ul>
-      <Container.Btn onClick={active && success} active={active}>
+      <Container.Btn onClick={onClicked} active={active}>
         Получить код
       </Container.Btn>
     </Container>

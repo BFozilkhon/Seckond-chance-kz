@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { Container, Div, Flexing } from "./style";
 
 export const Verify = () => {
-  const [active, setActive] = useState(true);
+  const [active] = useState(true);
   const inputRef2 = useRef(null);
   const inputRef3 = useRef(null);
   const inputRef4 = useRef(null);

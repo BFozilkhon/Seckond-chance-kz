@@ -7,6 +7,7 @@ import Katalog from "../component/Dashboard/Katalog";
 import { Order } from "../component/Dashboard/Order";
 import Settings from "../component/Dashboard/Settings";
 import CreateProduct from "../component/Dashboard/CreateProduct";
+import LatestOrders from "../component/Dashboard/HomeDashboard/LatestOrders";
 
 export const dashboardData = [
   {
@@ -16,6 +17,15 @@ export const dashboardData = [
     path: "home",
     element: <HomeDashboard />,
     child: [],
+  },
+  {
+    id: 1,
+    Icons: home,
+    title: "Главная",
+    path: "latest-orders",
+    element: <LatestOrders />,
+    child: [],
+    hidden: true
   },
   {
     id: 2,

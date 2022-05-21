@@ -1,4 +1,8 @@
 import styled from "styled-components";
+import { ReactComponent as bag } from "../../../assets/icons/bag-input.svg";
+import { ReactComponent as phone } from "../../../assets/icons/phone-input.svg";
+import { ReactComponent as location } from "../../../assets/icons/location-input.svg";
+import { ReactComponent as instagram } from "../../../assets/icons/instagram-input.svg";
 
 export const Container = styled.div``;
 
@@ -36,14 +40,24 @@ Box.Title = styled.div`
   margin-bottom: 16px;
 `;
 
-export const InputWrap = styled.div``;
+export const InputWrap = styled.div`
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-gap: 24px;
+  width: 100%;
+  height: 80%;
+`;
 
-InputWrap.Lable = styled.div`
+InputWrap.Boxing = styled.div``;
+
+export const Items = styled.div`
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
   line-height: 16px;
   color: #141414;
+  margin-bottom: 6px;
 `;
 
 export const InputCon = styled.div`
@@ -52,11 +66,26 @@ export const InputCon = styled.div`
   background: #ffffff;
   border: 1px solid #cfcde4;
   border-radius: 5px;
-  width: 340px;
-  height: 48px;
+  width: 80%;
+  height: 55px;
   padding: 16px;
 `;
-// InputCon.Icons1 = styled()``
+
+InputCon.Icons1 = styled(bag)``;
+InputCon.Icons2 = styled(phone)``;
+InputCon.Icons3 = styled(location)``;
+InputCon.Icons4 = styled(instagram)``;
+
+InputCon.Input = styled.input`
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  color: #141414;
+  border: none;
+  outline: none;
+  margin-left: 16px;
+`;
 
 // Items
 Container.Item = styled.div`
@@ -89,6 +118,38 @@ Container.Btn = styled.div`
   align-items: center;
   justify-content: center;
   margin-top: 16px;
+  cursor: pointer;
+  :active {
+    transform: scale(0.98);
+  }
+`;
+
+// third box
+
+Box.Wrapper = styled.div`
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 65%;
+`;
+
+export const Div = styled.div`
+  width: 30%;
+`;
+
+Container.BtnInput = styled.div`
+  background: #eee8f9;
+  border-radius: 6px;
+  width: 138px;
+  height: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  color: #c0bbca;
   cursor: pointer;
   :active {
     transform: scale(0.98);

@@ -2,8 +2,17 @@ import styled from "styled-components";
 
 export const Box = styled.div`
   width: 400px;
-  height: 500px;
   margin: 30px 0px;
+  padding-bottom: 10px;
+  @media (max-width:1800px){
+    width: 350px;
+    height: 450px;
+    margin: 50px 0px;
+  }
+  @media (max-width:1550px){
+    width: 95%;
+    height: 360px;
+  }
 `;
 
 Box.Img = styled.img`
@@ -18,6 +27,9 @@ Box.Title = styled.div`
   line-height: 28px;
   color: #141414;
   margin: 16px 0px 4px 0px;
+  @media (max-width:1550px){
+   margin-top: 10px;
+  }
 `;
 
 Box.TitleLight = styled.div`
@@ -27,6 +39,9 @@ Box.TitleLight = styled.div`
   line-height: 28px;
   color: #807b86;
   margin-bottom: 16px;
+  @media (max-width:1550px){
+   margin-bottom: 10px;
+  }
 `;
 
 Box.Price = styled.span`

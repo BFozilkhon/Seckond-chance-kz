@@ -15,7 +15,7 @@ export const Market = () => {
       <Swipers
         classname="swiper"
         slidesPerView={4.4}
-        spaceBetween={100}
+        spaceBetween={50}
         slidesPerGroup={1}
         loop={true}
         modules={[Pagination, Navigation]}

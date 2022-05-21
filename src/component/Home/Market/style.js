@@ -39,8 +39,9 @@ export const Swipers = styled(Swiper)`
 
 // Card
 export const Card = styled.div`
-  width: 400px;
-  height: 500px;
+  width: 100%;
+  height: auto;
+  padding-bottom: 10px;
 `;
 
 Card.Img = styled.img`
@@ -55,6 +56,9 @@ Card.Title = styled.div`
   line-height: 28px;
   color: #141414;
   margin: 15px 0px 10px 0px;
+  @media(max-width: 1250px){
+    font-size: 20px;
+  }
 `;
 
 Card.Text = styled.div`
@@ -63,4 +67,7 @@ Card.Text = styled.div`
   font-size: 20px;
   line-height: 24px;
   color: #807b86;
+  @media(max-width: 1250px){
+    font-size: 16px;
+  }
 `;

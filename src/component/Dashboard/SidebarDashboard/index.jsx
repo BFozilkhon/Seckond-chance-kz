@@ -6,20 +6,22 @@ import { Container, Wrap } from "./style";
 export const SidebarDashboard = () => {
   return (
     <Container>
-      {dashboardData.map(({ id, title, Icons, path }) => {
+      {dashboardData.map(({ id, title, Icons, path, hidden }) => {
         return (
-          <NavLink
-            className={({ isActive }) => isActive && "icons-active"}
-            key={id}
-            to={`/dashboard/${path}`}
-          >
-            <Wrap>
-              <Wrap.IconsCon className="icons-container">
-                <Icons className="icons" />
-              </Wrap.IconsCon>
-              <Wrap.Items className="icons-items">{title}</Wrap.Items>
-            </Wrap>
-          </NavLink>
+          !hidden && (
+            <NavLink
+              className={({ isActive }) => isActive && "icons-active"}
+              key={id}
+              to={`/dashboard/${path}`}
+            >
+              <Wrap>
+                <Wrap.IconsCon className="icons-container">
+                  <Icons className="icons" />
+                </Wrap.IconsCon>
+                <Wrap.Items className="icons-items">{title}</Wrap.Items>
+              </Wrap>
+            </NavLink>
+          )
         );
       })}
       <Wrap></Wrap>

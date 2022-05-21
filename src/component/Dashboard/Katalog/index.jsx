@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { Container, Flexing } from "./style";
 
 export const Katalog = () => {
@@ -11,7 +12,9 @@ export const Katalog = () => {
           Добавьте новые товары и отправьте их на продажу
         </Container.Text>
         <Flexing>
-          <Flexing.Btn>Стандартный товар</Flexing.Btn>
+          <Link to={"/dashboard/createproduct"}>
+            <Flexing.Btn>Стандартный товар</Flexing.Btn>
+          </Link>
           <Flexing.Btn>Аукионный товар</Flexing.Btn>
         </Flexing>
       </Container.Wrap>

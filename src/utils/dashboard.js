@@ -2,11 +2,11 @@ import { ReactComponent as home } from "../assets/icons/home.svg";
 import { ReactComponent as katalog } from "../assets/icons/katalog.svg";
 import { ReactComponent as bag } from "../assets/icons/bag.svg";
 import { ReactComponent as settings } from "../assets/icons/settings.svg";
-import Generic from "../component/Generic";
 import HomeDashboard from "../component/Dashboard/HomeDashboard";
 import Katalog from "../component/Dashboard/Katalog";
 import { Order } from "../component/Dashboard/Order";
 import Settings from "../component/Dashboard/Settings";
+import CreateProduct from "../component/Dashboard/CreateProduct";
 
 export const dashboardData = [
   {
@@ -27,6 +27,15 @@ export const dashboardData = [
   },
   {
     id: 3,
+    Icons: katalog,
+    title: "CreateProduct",
+    path: "createproduct",
+    element: <CreateProduct />,
+    child: [],
+    hidden: true,
+  },
+  {
+    id: 4,
     Icons: bag,
     title: "Заказы",
     path: "order",
@@ -34,7 +43,7 @@ export const dashboardData = [
     child: [],
   },
   {
-    id: 4,
+    id: 5,
     Icons: settings,
     title: "Магазин",
     path: "settings",

@@ -1,8 +1,26 @@
 import { Modal, Select } from "antd";
 import styled from "styled-components";
-import { ReactComponent as backArrow } from "../../../assets/icons/back.svg";
+import { ReactComponent as backArrow } from "../../../../assets/icons/back.svg";
 
-export const Container = styled.div``;
+export const Container = styled.div`
+  .ant-select {
+    width: 100%;
+  }
+
+  .ant-select-show-search.ant-select:not(.ant-select-customize-input)
+    .ant-select-selector {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+  }
+
+  .ant-select-show-search.ant-select:not(.ant-select-customize-input)
+    .ant-select-selector
+    input {
+    margin-top: 9px;
+  }
+`;
 
 export const Flexing = styled.div`
   display: flex;
@@ -247,3 +265,8 @@ Modals.Btn = styled.div`
     transform: scale(0.98);
   }
 `;
+
+export const activeStyle = {
+  background: "#7F1AFF",
+  color: "white",
+};

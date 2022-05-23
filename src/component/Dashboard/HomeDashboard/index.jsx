@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { BigBox, Container, MiniBox, WrapGrid } from "./style";
 
 export const HomeDashboard = () => {
@@ -53,7 +54,9 @@ export const HomeDashboard = () => {
             <BigBox.Text>
               Перейдите в раздел Магазин и добавьте необходимые данные
             </BigBox.Text>
-            <BigBox.Btn>Перейти в Магазин</BigBox.Btn>
+            <Link to={"/dashboard/home/latest-orders"}>
+              <BigBox.Btn>Перейти в Магазин</BigBox.Btn>
+            </Link>
           </BigBox.Div>
           <BigBox.Img1 />
         </BigBox>

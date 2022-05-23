@@ -6,8 +6,10 @@ import HomeDashboard from "../component/Dashboard/HomeDashboard";
 import Katalog from "../component/Dashboard/Katalog";
 import { Order } from "../component/Dashboard/Order";
 import Settings from "../component/Dashboard/Settings";
-import CreateProduct from "../component/Dashboard/CreateProduct";
 import LatestOrders from "../component/Dashboard/HomeDashboard/LatestOrders";
+import CreateProduct from "../component/Dashboard/Katalog/CreateProduct";
+import TableMyProduct from "../component/Dashboard/Katalog/TableMyProduct";
+import TableOrder from "../component/Dashboard/Order/Table";
 
 export const dashboardData = [
   {
@@ -20,12 +22,11 @@ export const dashboardData = [
   },
   {
     id: 1,
-    Icons: home,
     title: "Главная",
-    path: "latest-orders",
+    path: "home/latest-orders",
     element: <LatestOrders />,
     child: [],
-    hidden: true
+    hidden: true,
   },
   {
     id: 2,
@@ -38,9 +39,16 @@ export const dashboardData = [
   {
     id: 3,
     Icons: katalog,
-    title: "CreateProduct",
     path: "createproduct",
     element: <CreateProduct />,
+    child: [],
+    hidden: true,
+  },
+  {
+    id: 22,
+    title: "Каталог",
+    path: "catalog/my-product-table",
+    element: <TableMyProduct />,
     child: [],
     hidden: true,
   },
@@ -51,6 +59,14 @@ export const dashboardData = [
     path: "order",
     element: <Order />,
     child: [],
+  },
+  {
+    id: 44,
+    Icons: bag,
+    path: "order/table",
+    element: <TableOrder />,
+    child: [],
+    hidden: true,
   },
   {
     id: 5,

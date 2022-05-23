@@ -1,4 +1,5 @@
 import React from "react";
+import EmailModal from "./Email";
 import {
   Box,
   Container,
@@ -8,6 +9,8 @@ import {
   Items,
   Div,
 } from "./style";
+import SuccessModal from "./Success";
+import UnicPasswordModal from "./UnicPassword";
 
 export const Settings = () => {
   return (
@@ -87,6 +90,9 @@ export const Settings = () => {
         <Container.Link>ekinshi.shop@gmail.com</Container.Link>
       </Container.Item>
       <Container.Btn>Изменить почту</Container.Btn>
+      <SuccessModal />
+      <EmailModal />
+      <UnicPasswordModal />
     </Container>
   );
 };

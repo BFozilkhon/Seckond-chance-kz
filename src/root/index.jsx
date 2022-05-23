@@ -1,6 +1,7 @@
 import React from "react";
 import { Navigate, Route, Routes } from "react-router-dom";
 import NavbarDashboard from "../component/Dashboard/NavbarDashboard";
+import ProductInfo from "../component/Dashboard/Order/ProductInfo";
 import Navbar from "../component/Navbar";
 import { dashboardData } from "../utils/dashboard";
 import { navbarData } from "../utils/navbar";
@@ -30,6 +31,7 @@ const Root = () => {
         {dashboardData.map(({ id, path, element }) => {
           return <Route key={id} path={path} element={element} />;
         })}
+      <Route path='/dashboard/order/table:id' element={<ProductInfo/>} />
       </Route>
 
       <Route path="/" element={<Navigate to={"/home"} />} />

@@ -1,9 +1,15 @@
-import React from 'react'
+import React from "react";
+import { Modals } from "./style";
 
 export const SuccessModal = () => {
   return (
-    <div>SuccessModal</div>
-  )
-}
+    <Modals centered visible={false}>
+      <Modals.Circle>
+        <Modals.Tick />
+      </Modals.Circle>
+      <Modals.Title>Вы успешно изменили пароль</Modals.Title>
+    </Modals>
+  );
+};
 
-export default SuccessModal
+export default SuccessModal;

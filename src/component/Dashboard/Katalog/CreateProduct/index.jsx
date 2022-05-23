@@ -9,12 +9,14 @@ import {
   Text,
   Modals,
   Selects,
+  activeStyle,
 } from "./style";
 import { Checkbox } from "antd";
-import "./style.css";
+import { Link } from "react-router-dom";
 
 export const CreateProduct = () => {
   const [visible, setVisible] = useState(false);
+  const [text, setText] = useState("");
 
   const { Option } = Selects;
   return (
@@ -30,7 +32,11 @@ export const CreateProduct = () => {
         <BoxFirst>
           <InputWrapper>
             <InputWrapper.Lable>Название товара</InputWrapper.Lable>
-            <InputWrapper.Input type="text" placeholder="Введите" />
+            <InputWrapper.Input
+              onChange={(e) => setText(e.target.value)}
+              type="text"
+              placeholder="Введите"
+            />
           </InputWrapper>
           <InputWrapper>
             <InputWrapper.Lable>Название товара</InputWrapper.Lable>
@@ -154,7 +160,11 @@ export const CreateProduct = () => {
         </Box>
       </WrapGrid>
       <Flexing btn>
-        <Container.BtnOn onClick={() => setVisible(true)}>
+        <Container.BtnOn
+          style={text.length > 5 ? activeStyle : {}}
+          onClick={() => text.length > 5 && setVisible(true)}
+        >
+          {" "}
           Сохранить
         </Container.BtnOn>
         <Container.BtnOff>Отмена</Container.BtnOff>
@@ -168,9 +178,11 @@ export const CreateProduct = () => {
           <Modals.Btn onClick={() => setVisible(false)}>
             Вернуться назад
           </Modals.Btn>
-          <Modals.Btn cancel onClick={() => setVisible(false)}>
-            Да, отменить
-          </Modals.Btn>
+          <Link to={"/dashboard/catalog/my-product-table"}>
+            <Modals.Btn cancel onClick={() => setVisible(false)}>
+              Да, отменить
+            </Modals.Btn>
+          </Link>
         </Flexing>
       </Modals>
     </Container>
